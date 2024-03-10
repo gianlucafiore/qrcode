@@ -1,0 +1,19 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "QR generator for saltcorn on string fields",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gianlucafiore/qrcode.git"
+  },
+  "author": "Gianluca Fiore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gianlucafiore/qrcode/issues"
+  },
+  "homepage": "https://github.com/gianlucafiore/qrcode#readme"
+}
