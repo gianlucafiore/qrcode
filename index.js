@@ -21,75 +21,46 @@ const {
     isEdit: true,
     configFields: [
       {
-        name: "allow_input",
-        label: "Allow input",
-        type: "Bool",
+        name: "width",
+        label: "Width",
+        type: "Number",
       },
       {
-        name: "day_only",
-        label: "Only day",
-        type: "Bool",
+        name: "height",
+        label: "Height",
+        type: "Number",
         //sublabel: "Do not pick time",
       },
       {
-        name: "minDate",
-        label: "Min date",
-        type: "String",
-        sublabel: "(Ex: 2022-10-1 or today)",
+        name: "colorDark",
+        label: "Color Dark",
+        type: "Color"
       },
       {
-        name: "default_now",
-        label: "Default to now",
-        type: "Bool",
-      },
-      {
-        name: "current_hm",
-        label: "Current hour minute",
-        sublabel: "Set default time of day to current time.",
-        type: "Bool",
-      },
-      {
-        name: "locale",
-        label: "Language (locale)",
-        sublabel: "Available: es, pt, fr, it, ru, de",
-        type: "String",
-      },
-  
-      {
-        name: "dateFormat",
-        label: "Date format",
-        required: true,
-        type: "String",
-        default: "Y-m-d H:i",
-        sublabel: `<a href="https://flatpickr.js.org/formatting/">Formatting options</a>`,
-      },
-      {
-        name: "placeholder",
-        label: "Placeholder",
-        type: "String",
-      },
+        name: "colorLight",
+        label: "Color Light",
+        type: "Color"
+      }
     ],
     run: (nm, v, attrs, cls) => {
-    //   const rndid = Math.floor(Math.random() * 16777215).toString(16);
-    //   const opts = {
-    //     enableTime: !attrs.day_only,
-    //     allowInput: attrs.allow_input,
-    //     dateFormat: attrs.day_only ? "Y-m-d" : "Z",
-    //     altInput: true,
-    //     altFormat: attrs.dateFormat || (attrs.day_only ? "Y-m-d" : "Y-m-d H:i"),
-    //     minDate: attrs.minDate,
-    //     //maxDate: attrs.maxDate,
-    //     locale: attrs.locale,
-    //     defaultDate: attrs.default_now && !v ? new Date() : undefined,
-    //     defaultHour: attrs.current_hm && !v ? new Date().getHours() : undefined,
-    //     defaultMinute:
-    //       attrs.current_hm && !v ? new Date().getMinutes() : undefined,
-    //   };
+    const rndid = Math.floor(Math.random() * 16777215).toString(16);
+      const opts = {
+        width: !attrs.width,
+        height: attrs.height,
+        colorDark: attrs.colorDark || 'black',
+        colorLight:  attrs.colorLight || 'white'
+      };
       return (
-        '<div id="qrcode">this is qrcode</div>'
+        `<div id="${rndid}"></div>`
         +
         script(
-          domReady(`new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie")`)
+          domReady(`new QRCode("test", {
+            text: ${v},
+            width: 128,
+            height: 128,
+            colorDark : "#000000",
+            colorLight : "#ffffff"
+          })`)
         )
       );
     },
