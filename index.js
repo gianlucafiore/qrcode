@@ -101,6 +101,5 @@ const {
       flatpickr
     },
     plugin_name: "flatpickr-date",
-    headers,
-    viewtemplates: [range_filter],
+    headers, 
   };
