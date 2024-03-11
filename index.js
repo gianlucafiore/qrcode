@@ -58,8 +58,8 @@ const {
             text: '${v}',
             width: '${opts.width}',
             height: '${opts.height}',
-            colorDark : ${opts.colorDark} || "#000000",
-            colorLight : ${opts.colorLight} || "#ffffff"
+            colorDark : ${opts.colorDark || "#000000"},
+            colorLight : ${opts.colorLight || "#ffffff"}
           })`)
         )
       );
