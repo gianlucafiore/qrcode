@@ -1,5 +1,5 @@
 {
-  "name": "saltcorn-qrcode",
+  "name": "@gianlucafiore92/qrcode",
   "version": "0.1.0",
   "description": "QR generator for saltcorn on string fields",
   "main": "index.js",
