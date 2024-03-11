@@ -12,7 +12,7 @@ const {
   const headers = [
     {
       //script: `${base_headers}/flatpickr.min.js`,
-      script: '/public/qrcodejs-master/qrcode.js'
+      script: './plugins/public/qrcodejs-master/qrcode.js'
     }
   ];
   
@@ -86,7 +86,7 @@ const {
     //       attrs.current_hm && !v ? new Date().getMinutes() : undefined,
     //   };
       return (
-        '<div id="qrcode"></div>'
+        '<div id="qrcode">this is qrcode</div>'
         +
         script(
           domReady(`new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie")`)
