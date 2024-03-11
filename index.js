@@ -16,8 +16,8 @@ const {
     }
   ];
   
-  const flatpickr = {
-    type: "Date",
+  const qrcode = {
+    type: "String",
     isEdit: true,
     configFields: [
       {
@@ -98,8 +98,8 @@ const {
   module.exports = {
     sc_plugin_api_version: 1,
     fieldviews: {
-      flatpickr
+      qrcode
     },
-    plugin_name: "flatpickr-date",
+    plugin_name: "qrcode",
     headers, 
   };
