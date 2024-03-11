@@ -45,7 +45,7 @@ const {
     run: (nm, v, attrs, cls) => {
     const rndid = Math.floor(Math.random() * 16777215).toString(16);
       const opts = {
-        width: !attrs.width,
+        width: attrs.width,
         height: attrs.height,
         colorDark: attrs.colorDark || 'black',
         colorLight:  attrs.colorLight || 'white'
