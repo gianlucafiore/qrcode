@@ -56,10 +56,10 @@ const {
         script(
           domReady(`new QRCode(document.getElementById("${rndid}"), {
             text: '${v}',
-            width: '${width}',
-            height: '${height}',
-            colorDark : ${colorDark} || "#000000",
-            colorLight : ${colorLight} || "#ffffff"
+            width: '${opts.width}',
+            height: '${opts.height}',
+            colorDark : ${opts.colorDark} || "#000000",
+            colorLight : ${opts.colorLight} || "#ffffff"
           })`)
         )
       );
