@@ -54,7 +54,7 @@ const {
         `<div id="${rndid}"></div>`
         +
         script(
-          domReady(`new QRCode("test", {
+          domReady(`new QRCode(document.getElementById("${rndid}"), {
             text: ${v},
             width: 128,
             height: 128,
