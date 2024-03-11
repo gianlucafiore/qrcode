@@ -12,7 +12,7 @@ const {
   const headers = [
     {
       //script: `${base_headers}/flatpickr.min.js`,
-      script: './qrcodejs-master/qrcode.js'
+      script: '/public/qrcodejs-master/qrcode.js'
     }
   ];
   
