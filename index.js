@@ -12,7 +12,7 @@ const {
   const headers = [
     {
       //script: `${base_headers}/flatpickr.min.js`,
-      script: './plugins/public/qrcodejs-master/qrcode.js'
+      script: 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js'
     }
   ];
   
@@ -103,3 +103,13 @@ const {
     plugin_name: "qrcode",
     headers, 
   };
+
+      
+
+{/* <div id="qrcode"></div>
+
+
+<script type="text/javascript" src="/public/qrcodejs-master/qrcode.js"></script>
+<script type="text/javascript">
+    new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+</script> */}
