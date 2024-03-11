@@ -98,8 +98,7 @@ const {
   module.exports = {
     sc_plugin_api_version: 1,
     fieldviews: {
-      flatpickr,
-      flatpickr_date_range: require("./date-range-fieldview.js"),
+      flatpickr
     },
     plugin_name: "flatpickr-date",
     headers,
