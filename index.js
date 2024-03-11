@@ -5,8 +5,7 @@ const {
     script,
     domReady,
     text_attr,
-  } = require("@saltcorn/markup/tags");
-  const range_filter = require("./date-range-filter");
+  } = require("@saltcorn/markup/tags"); 
 //   const base_headers = `/plugins/public/flatpickr-date@${
 //     require("./package.json").version
 //   }`;
