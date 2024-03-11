@@ -55,11 +55,11 @@ const {
         +
         script(
           domReady(`new QRCode(document.getElementById("${rndid}"), {
-            text: '${v} hello',
-            width: 128,
-            height: 128,
-            colorDark : "#000000",
-            colorLight : "#ffffff"
+            text: '${v}',
+            width: '${width}',
+            height: '${height}',
+            colorDark : ${colorDark} || "#000000",
+            colorLight : ${colorLight} || "#ffffff"
           })`)
         )
       );
