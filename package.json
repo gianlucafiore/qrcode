@@ -1,20 +1,17 @@
 {
-  "name": "@gianlucafiore/qrcode",
-  "version": "1.0.0",
+  "name": "saltcorn-qrcode",
+  "version": "0.1.0",
   "description": "QR generator for saltcorn on string fields",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "@saltcorn/markup": "^0.2.1",
+    "@saltcorn/data": "^0.2.1"
   },
-  "repository": "github:gianlucafiore/qrcode",
   "author": "Gianluca Fiore",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gianlucafiore/qrcode/issues"
-  },
-  "homepage": "https://github.com/gianlucafiore/qrcode#readme",
+  "repository": "github:gianlucafiore/qrcode",
   "publishConfig": {
     "access": "public"
   }
 }
- 
+
