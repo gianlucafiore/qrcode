@@ -8,9 +8,13 @@
   },
   "repository": "github:gianlucafiore/qrcode",
   "author": "Gianluca Fiore",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gianlucafiore/qrcode/issues"
   },
-  "homepage": "https://github.com/gianlucafiore/qrcode#readme"
+  "homepage": "https://github.com/gianlucafiore/qrcode#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
+ 
