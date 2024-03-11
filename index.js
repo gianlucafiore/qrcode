@@ -9,13 +9,14 @@ const {
 //   const base_headers = `/plugins/public/flatpickr-date@${
 //     require("./package.json").version
 //   }`;
-  const headers = [
-    {
-      //script: `${base_headers}/flatpickr.min.js`,
-      script: 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js'
-    }
-  ];
-  
+  // const headers = [
+  //   {
+  //     //script: `${base_headers}/flatpickr.min.js`,
+  //     script: 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js'
+  //   }
+  // ];
+const QRCode = require('./qrcode');  
+
   const qrcode = {
     type: "String",
     isEdit: true,
