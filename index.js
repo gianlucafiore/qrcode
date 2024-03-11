@@ -14,7 +14,7 @@ const {
   
   const qrcode = {
     type: "String",
-    isEdit: true,
+    isEdit: false,
     configFields: [
       {
         name: "width",
