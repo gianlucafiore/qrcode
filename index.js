@@ -23,12 +23,12 @@ const {
       {
         name: "width",
         label: "Width",
-        type: "Number",
+        type: "Integer",
       },
       {
         name: "height",
         label: "Height",
-        type: "Number",
+        type: "Integer",
         //sublabel: "Do not pick time",
       },
       {
