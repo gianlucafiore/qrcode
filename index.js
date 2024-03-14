@@ -51,7 +51,7 @@ const {
         +
         script(
           domReady(`new QRCode(document.getElementById("${rndid}"), {
-            text: '${JSON.stringify(v) || 'none text'}',
+            text: '${v}',
             width: '${opts.width || 128}',
             height: '${opts.height || 128}',
             colorDark : '${opts.colorDark || "#000000"}',
