@@ -46,7 +46,7 @@ const {
         colorDark: attrs.colorDark || 'black',
         colorLight:  attrs.colorLight || 'white'
       };
-        console.log('linea 49: ',v)
+        console.log('linea 49 ---------------------->>>> : ',v)
       return (
         `<div id="${rndid}"></div>`
         +
