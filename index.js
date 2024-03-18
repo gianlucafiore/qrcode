@@ -45,9 +45,7 @@ const {
         height: attrs.height,
         colorDark: attrs.colorDark || 'black',
         colorLight:  attrs.colorLight || 'white'
-      };
-        console.log('linea 49 ---------------------->>>> : ',nm)
-        console.log('linea 49 ---------------------->>>> : ',cls)
+      }; 
       return (
         `<div id="${rndid}"></div>`
         +
