@@ -38,7 +38,7 @@ const {
         type: "Color"
       }
     ],
-    run: (nm, v, attrs, cls) => {
+    run: (value, req, attrs, cls) => {
     const rndid = Math.floor(Math.random() * 16777215).toString(16);
       const opts = {
         width: attrs.width,
@@ -53,7 +53,7 @@ const {
         +
         script(
           domReady(`new QRCode(document.getElementById("${rndid}"), {
-            text: '${v}',
+            text: '${value}',
             width: '${opts.width || 128}',
             height: '${opts.height || 128}',
             colorDark : '${opts.colorDark || "#000000"}',
