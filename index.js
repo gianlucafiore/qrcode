@@ -46,9 +46,9 @@ const {
     ],
     //run: (value, req, attrs, cls) => {
       run: (nm, value, attrs, cls, reqd, field, row) => {
-      for(r in attrs.row){
-        console.log(r)
+      for(r in attrs.row){ 
         eval(`var ${r} = ${attrs[r]};`)
+        console.log(eval(r))
       }
       
       const rndid = Math.floor(Math.random() * 16777215).toString(16);
@@ -58,12 +58,13 @@ const {
         value_formated = eval(attrs.preformatting)
       }
       else value_formated = value;
-
+      console.log('linea 61: ', eval(value))
+      console.log('linea 62: ', value)
       const opts = {
         width: attrs.width,
         height: attrs.height,
-        colorDark: attrs.colorDark || 'black',
-        colorLight:  attrs.colorLight || 'white',
+        colorDark: attrs.colorDark,
+        colorLight:  attrs.colorLight,
         preformatting: value_formated
       }; 
       return (
