@@ -44,9 +44,13 @@ const {
       },
 
     ],
-    run: (value, req, attrs, cls) => {
+    //run: (value, req, attrs, cls) => {
+      run: (nm, value, attrs, cls, reqd, field, row) => {
       console.log('CLS LINEA 48:', cls)
       console.log('CLS LINEA 49:', attrs)
+      console.log('CLS LINEA 51:', reqd)
+      console.log('CLS LINEA 52:', field)
+      console.log('CLS LINEA 53:', row)
       
       const rndid = Math.floor(Math.random() * 16777215).toString(16);
       let value_formated;
