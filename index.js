@@ -48,7 +48,8 @@ const {
       const rndid = Math.floor(Math.random() * 16777215).toString(16);
       let value_formated;
       if(attrs.preformatting){
-        value_formated.replace('{{{value}}}', value);
+        attrs.preformatting.replace('{{{value}}}', value);
+        value_formated = eval(value)
       }
       else value_formated = value;
       const opts = {
