@@ -47,18 +47,20 @@ const {
     //run: (value, req, attrs, cls) => {
       run: (nm, value, attrs, cls, reqd, field, row) => {
       console.log('CLS LINEA 48:', cls)
-      console.log('CLS LINEA 49:', attrs)
-      console.log('CLS LINEA 51:', reqd)
-      console.log('CLS LINEA 52:', field)
-      console.log('CLS LINEA 53:', row)
+      console.log('CLS LINEA 49:', attrs) 
+
+      for(r in attrs.row){
+        eval(`var ${r} = ${attrs[r]};`)
+      }
       
       const rndid = Math.floor(Math.random() * 16777215).toString(16);
       let value_formated;
+      
       if(attrs.preformatting){
-        attrs.preformatting.replace('{{{value}}}', value);
         value_formated = eval(value)
       }
       else value_formated = value;
+
       const opts = {
         width: attrs.width,
         height: attrs.height,
