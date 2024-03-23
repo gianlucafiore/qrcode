@@ -45,7 +45,7 @@ const {
 
     ],
     //run: (value, req, attrs, cls) => {
-      run: (nm, value, attrs, cls, reqd, field, row) => {
+      run: (value, req, attrs, cls, reqd, field, row) => {
       for(r in attrs.row){ 
         eval(`var ${r} = ${attrs[r]};`)
         console.log(eval(r))
@@ -57,11 +57,10 @@ const {
       if(attrs.preformatting){
         value_formated = eval(attrs.preformatting)
       }
-      else value_formated = value;
-      console.log('linea 61: ', eval(value))
+      else value_formated = value; 
+
       console.log('linea 62: ', value)
-      console.log('linea 63: ', nm)
-      console.log('linea 64: ', row)
+      console.log('linea 63: ', attrs) 
       const opts = {
         width: attrs.width,
         height: attrs.height,
