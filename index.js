@@ -45,9 +45,9 @@ const {
 
     ],
     //run: (value, req, attrs, cls) => {
-      run: (value, req, attrs, cls, reqd, field, row) => {
+      run: async (value, req, attrs, cls, reqd, field, row) => {
       for(r in attrs.row){ 
-        eval(`var ${r} = ${attrs[r]};`)
+        await eval(`var ${r} = ${attrs[r]};`)
         console.log(eval(r))
       }
       
