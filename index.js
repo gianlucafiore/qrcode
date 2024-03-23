@@ -39,7 +39,8 @@ const {
       },
       {
         name: "preformatting",
-        label: "String formatting with JS",
+        label: "String additional formatting.",
+        sublabel: "Example: https://somesite.com/persons/{{name}}",
         type: "String"
       },
 
