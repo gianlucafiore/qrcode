@@ -39,8 +39,8 @@ const {
       },
       {
         name: "preformatting",
-        label: "String additional formatting.",
-        sublabel: "Example: https://somesite.com/persons/{{name}}",
+        label: "String additional formatting. Notice: {{value}}",
+        sublabel: "Place field variable ( {{value}} ) like this example: https://somesite.com/persons/{{value}}",
         type: "String"
       },
 
