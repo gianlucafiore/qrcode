@@ -45,19 +45,13 @@ const {
 
     ],
     //run: (value, req, attrs, cls) => {
-      run: async (value, req, attrs, cls, reqd, field, row) => {
-      for(r in attrs.row){ 
-        await eval(`var ${r} = ${attrs[r]};`)
-        console.log(await eval(r))
-      }
-      
-      const rndid = Math.floor(Math.random() * 16777215).toString(16);
-      let value_formated;
+    run: async (value, req, attrs, cls, reqd, field, row) => {
 
+      const rndid = Math.floor(Math.random() * 16777215).toString(16);
       if(attrs.preformatting){
-        value_formated = eval(attrs.preformatting)
+
+        attrs.preformatting.replace('{{value}}', value)
       }
-      else value_formated = value; 
 
       console.log('linea 62: ', value)
       console.log('linea 63: ', attrs) 
@@ -66,7 +60,7 @@ const {
         height: attrs.height,
         colorDark: attrs.colorDark,
         colorLight:  attrs.colorLight,
-        preformatting: value_formated
+        preformatting: attrs.preformatting
       }; 
       return (
         `<div id="${rndid}"></div>`
