@@ -48,7 +48,7 @@ const {
       run: async (value, req, attrs, cls, reqd, field, row) => {
       for(r in attrs.row){ 
         await eval(`var ${r} = ${attrs[r]};`)
-        console.log(eval(r))
+        console.log(await eval(r))
       }
       
       const rndid = Math.floor(Math.random() * 16777215).toString(16);
