@@ -48,9 +48,8 @@ const {
     run: (value, req, attrs, cls, reqd, field, row) => {
 
       const rndid = Math.floor(Math.random() * 16777215).toString(16);
-      if(attrs.preformatting){
-
-        attrs.preformatting.replace('{{value}}', value)
+      if(attrs.preformatting){ 
+        value = attrs.preformatting.replace('{{value}}', value) 
       }
 
       console.log('linea 62: ', value)
@@ -67,7 +66,7 @@ const {
         +
         script(
           domReady(`new QRCode(document.getElementById("${rndid}"), {
-            text: '${opts.value_formated}',
+            text: '${value}',
             width: '${opts.width || 128}',
             height: '${opts.height || 128}',
             colorDark : '${opts.colorDark || "#000000"}',
