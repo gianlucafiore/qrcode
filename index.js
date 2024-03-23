@@ -45,7 +45,7 @@ const {
 
     ],
     //run: (value, req, attrs, cls) => {
-    run: async (value, req, attrs, cls, reqd, field, row) => {
+    run: (value, req, attrs, cls, reqd, field, row) => {
 
       const rndid = Math.floor(Math.random() * 16777215).toString(16);
       if(attrs.preformatting){
