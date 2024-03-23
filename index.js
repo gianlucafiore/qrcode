@@ -60,6 +60,8 @@ const {
       else value_formated = value;
       console.log('linea 61: ', eval(value))
       console.log('linea 62: ', value)
+      console.log('linea 63: ', nm)
+      console.log('linea 64: ', row)
       const opts = {
         width: attrs.width,
         height: attrs.height,
